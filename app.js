@@ -10,6 +10,8 @@ var App = function(targetElementId){
   	var turn = true;
   	var squareSize = me.canvas.width/squares;
   	
+  	// eventListener calls clickHandle which assigns 'red' or 'blue' to a cell's player property
+  	// then calls draw and gameOver functions
 	var clickHandle = function(event){
 			turn = !turn;
 			var x = event.pageX - me.canvas.offsetLeft;
